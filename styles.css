@@ -1,0 +1,364 @@
+body {
+    font-family: 'SF Pro Text', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    background-image: url('image/image3.jpg'); /* Corrected syntax for background image */
+    background-size: cover; /* Optional: Ensures the image covers the entire background */
+    background-position: center; /* Optional: Centers the background image */
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column; /* Ensures layout can be adjusted vertically */
+    align-items: center; /* Centers content horizontally */
+    min-height: 100vh;
+}
+.footer{
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    padding: 20px; 
+    font-weight: 100;
+    width: 79%; 
+    text-align: center; 
+    box-shadow: var(--box-shadow);
+    margin: 0;
+
+}
+.head{
+    background-color: var(--bg-color);
+    border-radius: 20px; /* Changed to 20px for a smoother curve */
+    padding: 20px; /* Added padding for better spacing */
+    font-weight: 100; /* Light font weight */
+    width: 79%; /* Set width to full for a header */
+    text-align: center; /* Center-aligns text */
+    box-shadow: var(--box-shadow);
+    margin: 0; /* Removes default margin */
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #000000;
+    --box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.849);
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #206cad;
+    --box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.845);
+}
+
+/* Theme Switch */
+.switch {
+    position: relative;
+    display: grid;
+    width: 55px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #d0c7c7;
+    transition: 0.9s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    background-image: url('image/light-bulb.gif'); 
+    left: 5px;
+    bottom: 2px;
+    background-color: rgb(30, 4, 4);
+    transition: 0.9s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #1991dc;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Bento Box Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(150px, 2fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.bento-box {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow); /* Use defined variable */
+    transition: transform 0.3s;
+}
+
+/* Bento Box Layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    grid-template-rows: repeat(3, 150px); /* Sets a base height for rows */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Maximum width for the grid */
+}
+
+/* Individual Bento Box Styling */
+.bento-box {
+    background-color: var(--bg-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem; /* Makes text inside boxes larger */
+    position: relative;
+}
+#clock {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px; 
+    font-weight: bold;
+    margin-top: 10px; /* Space above the clock */
+    text-align: center; /* Center the text */
+}
+#box-7{
+background-image: url(image/blr.jpg);
+position: relative;
+overflow: hidden;
+background-size:contain;
+ background-position: center;
+background-color: #d0c7c748;
+}
+#weather {
+    font-size: 20px; 
+    font-weight: bold;
+    margin-top: 10px; /* Space above the weather display */
+    text-align: center; /* Center the text */
+}
+#box-5 {
+    position: relative; /* Required for absolute positioning of video */
+    overflow: hidden; /* Prevent overflow */
+}
+
+video {
+    width: 200%; /* Make video take full width of the bento box */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Add rounded corners to the video */
+    box-shadow: var(--box-shadow); 
+}
+
+
+
+/* Unique Size for Each Box */
+.bento-box:nth-child(1) {
+    grid-column: span 2; /* Box spans two columns */
+    grid-row: span 1; /* Box occupies one row */
+}
+
+.bento-box:nth-child(2) {
+    grid-column: span 1; /* Default column span */
+    grid-row: span 2; /* Box occupies two rows */
+}
+/*
+.bento-box:nth-child(3) {
+    grid-column: span 1; /* Default column span */
+  /*  grid-row: span 1; /* Box occupies one row */
+/*}*/
+
+.bento-box:nth-child(4) {
+    grid-column: span 1; /* Default column span */
+    grid-row: span 2; /* Box occupies two rows */
+}
+
+.bento-box:nth-child(5) {
+    grid-column: span 1; /* Box spans two columns */
+    grid-row: span 3; /* Box occupies one row */
+}
+
+.bento-box:nth-child(6) {
+    grid-column: span 1; /* Default column span */
+    grid-row: span 1; /* Box occupies one row */
+}
+.bento-box:nth-child(7) {
+    grid-column: span 1; /* Default column span */
+    grid-row: span 1; /* Box occupies one row */
+}
+.bento-box:nth-child(8) {
+    grid-column: span 1; /* Default column span */
+    grid-row: span 1; /* Box occupies one row */
+}
+.bento-box:hover {
+    transform: scale(1.05); /* Slightly enlarges the box on hover */
+    background-color: rgba(217, 217, 217, 0.231);
+    box-shadow: 0px 4px 10px rgba(28, 97, 246, 0.845);
+}
+
+/* Carousel Styling */
+.carousel {
+    position: relative;
+    width: 200%;
+    height: 100%; /* Adjust as necessary */
+    overflow: hidden;
+}
+
+.carousel-slide {
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    background-position: center;
+    position: absolute; /* Needed for the sliding effect */
+    transition: transform 1.5s ease; /* Smooth transition */
+    border-radius: 20px;
+}
+
+/* Social Links */
+.social-links {
+    text-align: left;
+    margin: 20px 0;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-links img:hover {
+    transform: scale(1.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+}
+body {
+    animation: fadeIn 2s;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .bento-box {
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  .bento-box:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  
+  .bento-box:nth-child(1) {
+    animation: slideInFromLeft 1s;
+  }
+  
+  .bento-box:nth-child(2) {
+    animation: slideInFromRight 1s;
+  }
+  
+  .bento-box:nth-child(3) {
+    animation: slideInFromTop 1s;
+  }
+  
+  .bento-box:nth-child(4) {
+    animation: slideInFromBottom 1s;
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .carousel-slide {
+    animation: slideIn 10s infinite;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-100%);
+    }
+    40% {
+      transform: translateX(-200%);
+    }
+    60% {
+      transform: translateX(-300%);
+    }
+    80% {
+      transform: translateX(-400%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  @media (max-width: 768px) {
+    .bento-box {
+      transition: transform 0.1s, opacity 0.1s;
+    }
+    .carousel-slide {
+      animation: slideIn 5s infinite;
+    }
+  }
