@@ -45,7 +45,7 @@ function updateClock() {
     const minutes = String(now.getMinutes()).padStart(2, '0');
     const seconds = String(now.getSeconds()).padStart(2, '0');
     const clockElement = document.getElementById('clock');
-    clockElement.textContent = `${hours}:${minutes}:${seconds}`; // Format the time
+    clockElement.textContent = `${hours}:${minutes}:${seconds}`; 
 }
 
 // Update the clock immediately and then every second
@@ -55,7 +55,7 @@ setInterval(updateClock, 1000);
 
 // Function to fetch weather data
 async function fetchWeather() {
-    const apiKey = '06632d037bc3a179a7183d62af5f56c8'; // Your OpenWeatherMap API key
+    const apiKey = '06632d037bc3a179a7183d62af5f56c8'; 
     const city = 'Bengaluru'; // Your desired city
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
@@ -93,17 +93,17 @@ function changeCarouselImage() {
 }
 
 // Automatically change slides every 3 seconds
-setInterval(changeCarouselImage, 3000);
+setInterval(changeCarouselImage, 7000);
 
 // Show the initial slide
 showSlide(currentSlide);
 
 
 // Set interval to change slides every 3 seconds
-setInterval(changeCarouselImage, 1000);
+setInterval(changeCarouselImage, 6000);
 
 // 3D Tilt Effect for Bento Boxes
 VanillaTilt.init(document.querySelectorAll(".bento-box"), {
     max: 25,
-    speed: 400
+    speed: 200
 });

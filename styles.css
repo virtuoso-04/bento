@@ -2,7 +2,7 @@ body {
     font-family: 'SF Pro Text', sans-serif;
     margin: 10px;
     padding: 10px;
-    background-image: url('image/image3.jpg'); /* Corrected syntax for background image */
+    background-image: url('image/image2.jpg'); /* Corrected syntax for background image */
     background-size: cover; /* Optional: Ensures the image covers the entire background */
     background-position: center; /* Optional: Centers the background image */
     color: var(--text-color);
@@ -280,19 +280,19 @@ body {
   }
   
   .bento-box:nth-child(1) {
-    animation: slideInFromLeft 1s;
+    animation: slideInFromLeft 1.5s;
   }
   
   .bento-box:nth-child(2) {
-    animation: slideInFromRight 1s;
+    animation: slideInFromRight 1.5s;
   }
   
   .bento-box:nth-child(3) {
-    animation: slideInFromTop 1s;
+    animation: slideInFromTop 1.5s;
   }
   
   .bento-box:nth-child(4) {
-    animation: slideInFromBottom 1s;
+    animation: slideInFromBottom 1.5s;
   }
   
   @keyframes slideInFromLeft {
